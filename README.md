@@ -7,6 +7,13 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
+## Report
+
+A detailed forensic report is available in the `reports/` directory.
+
+- `reports/Lumma_Stealer_Network_Analysis_Report.pdf`
+
+---
 
 ## Table of Contents
 
