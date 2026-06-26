@@ -6,7 +6,9 @@
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-TA0011-orange)
 
 ---
+## Attack Flow
 
+```
 Victim (10.6.26.101)
         │
         │ DNS Query
@@ -19,10 +21,11 @@ Victim (10.6.26.101)
         │
         │ HTTP Download
         ▼
-86.54.25.50
+    86.54.25.50
         │
         ▼
-soks.exe
+     soks.exe
+```
 
 ---
 
