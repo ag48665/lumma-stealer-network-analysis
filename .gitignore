@@ -1,0 +1,12 @@
+# Wireshark
+*.pcapng
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VSCode
+.vscode/
+
+# Python
+__pycache__/

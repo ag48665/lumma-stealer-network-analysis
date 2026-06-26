@@ -3,6 +3,12 @@
 ## Overview
 
 This project presents a forensic network traffic analysis of a Lumma Stealer malware infection using Wireshark. The objective was to identify the infection process, analyze network communications, recover Indicators of Compromise (IoCs), and observe how the malware communicated with its Command-and-Control (C2) infrastructure.
+# Lumma Stealer Network Traffic Analysis
+
+![Wireshark](https://img.shields.io/badge/Wireshark-Network%20Analysis-blue)
+![DFIR](https://img.shields.io/badge/DFIR-Malware%20Analysis-red)
+![SOC](https://img.shields.io/badge/SOC-Threat%20Hunting-green)
+![MITRE ATT&CK](https://img.shields.io/badge/MITRE-TA0011-orange)
 
 ---
 
