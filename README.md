@@ -5,6 +5,27 @@
 ![SOC](https://img.shields.io/badge/SOC-Threat%20Hunting-green)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-TA0011-orange)
 
+---
+
+Victim (10.6.26.101)
+        │
+        │ DNS Query
+        ▼
+    genhqq.xyz
+        │
+        │ TLS (443)
+        ▼
+144.172.115.212 (C2)
+        │
+        │ HTTP Download
+        ▼
+86.54.25.50
+        │
+        ▼
+soks.exe
+
+---
+
 ## Overview
 
 This project presents a forensic network traffic analysis of a Lumma Stealer malware infection using Wireshark. The objective was to identify the infection process, analyze network communications, recover Indicators of Compromise (IoCs), and observe how the malware communicated with its Command-and-Control (C2) infrastructure.
@@ -204,6 +225,16 @@ The TCP Endpoints view lists all TCP connections established during the maliciou
 
 ---
 
+## Detection Opportunities
+
+- DNS monitoring for suspicious domains
+- TLS SNI inspection
+- Detect outbound HTTPS to rare domains
+- Monitor executable downloads over HTTP
+- Block known malicious IoCs
+
+---
+
 ## MITRE ATT&CK Mapping
 
 | Tactic | Technique | Description |
@@ -212,6 +243,17 @@ The TCP Endpoints view lists all TCP connections established during the maliciou
 | Command and Control | T1573 | Encrypted Channel (TLS) |
 | Command and Control | T1105 | Ingress Tool Transfer |
 | Discovery | T1016 | System Network Configuration Discovery (network communication observed) |
+
+---
+
+## Infection Timeline
+
+1. Victim performs DNS lookup for **genhqq.xyz**
+2. TCP three-way handshake
+3. TLS Client Hello (SNI = genhqq.xyz)
+4. Encrypted communication established
+5. Malware downloads **soks.exe**
+6. Persistent encrypted communication with C2
 
 ---
 
