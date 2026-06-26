@@ -4,6 +4,7 @@
 ![DFIR](https://img.shields.io/badge/DFIR-Malware%20Analysis-red)
 ![SOC](https://img.shields.io/badge/SOC-Threat%20Hunting-green)
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-TA0011-orange)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 ---
 
@@ -272,11 +273,28 @@ Although TLS encryption prevents inspection of the application payload, Wireshar
 The recovered Indicators of Compromise (IoCs) can be used for threat hunting, intrusion detection, malware detection, and incident response activities.
 
 ---
+
 ## License
 
 This project is intended for educational and malware analysis purposes only.
 
 ---
+
+## Disclaimer
+
+This project is intended solely for educational, research, and malware analysis purposes. All Indicators of Compromise (IoCs) are publicly known and are provided to support cybersecurity education and defensive security practices.
+
+---
+
+## References
+
+- Malware-Traffic-Analysis.net
+- Wireshark Documentation
+- MITRE ATT&CK
+- VirusTotal
+
+---
+
 ## Author
 
 **Agata Gabara**
