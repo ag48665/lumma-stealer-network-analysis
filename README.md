@@ -15,7 +15,7 @@ This project presents a forensic network traffic analysis of a Lumma Stealer mal
 
 ## Attack Flow
 
-```text
+```
                Internet
                     │
         ┌──────────────────────┐
@@ -34,6 +34,8 @@ This project presents a forensic network traffic analysis of a Lumma Stealer mal
                     ▼
              86.54.25.50
                 soks.exe
+```
+
 ---
 
 ## Analysis Objectives
