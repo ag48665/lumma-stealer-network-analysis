@@ -6,33 +6,34 @@
 ![MITRE ATT&CK](https://img.shields.io/badge/MITRE-TA0011-orange)
 
 ---
-## Attack Flow
-
-```
-Victim (10.6.26.101)
-        │
-        │ DNS Query
-        ▼
-    genhqq.xyz
-        │
-        │ TLS (443)
-        ▼
-144.172.115.212 (C2)
-        │
-        │ HTTP Download
-        ▼
-    86.54.25.50
-        │
-        ▼
-     soks.exe
-```
-
----
 
 ## Overview
 
 This project presents a forensic network traffic analysis of a Lumma Stealer malware infection using Wireshark. The objective was to identify the infection process, analyze network communications, recover Indicators of Compromise (IoCs), and observe how the malware communicated with its Command-and-Control (C2) infrastructure.
 
+---
+
+## Attack Flow
+
+```text
+               Internet
+                    │
+        ┌──────────────────────┐
+        │   genhqq.xyz         │
+        │ 144.172.115.212      │
+        └──────────────────────┘
+                    ▲
+                 TLS 443
+                    │
+         ┌─────────────────┐
+         │ Victim          │
+         │10.6.26.101      │
+         └─────────────────┘
+                    │
+              HTTP Download
+                    ▼
+             86.54.25.50
+                soks.exe
 ---
 
 ## Analysis Objectives
