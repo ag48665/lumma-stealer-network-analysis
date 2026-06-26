@@ -223,13 +223,11 @@ Although TLS encryption prevents inspection of the application payload, Wireshar
 
 The recovered Indicators of Compromise (IoCs) can be used for threat hunting, intrusion detection, malware detection, and incident response activities.
 
-
 ---
 ## License
 
 This project is intended for educational and malware analysis purposes only.
 
----
 ---
 
 ## Author
