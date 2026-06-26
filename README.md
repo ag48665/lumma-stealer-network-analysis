@@ -8,11 +8,28 @@
 
 ---
 
+## Table of Contents
+
+- Overview
+- Attack Flow
+- Analysis Objectives
+- Repository Structure
+- Tools Used
+- Indicators of Compromise
+- Protocol Analysis
+- Detection Opportunities
+- MITRE ATT&CK Mapping
+- Infection Timeline
+- Conclusion
+- Disclaimer
+- References
+- Author
+
+---
+
 ## Overview
 
 This project presents a forensic network traffic analysis of a Lumma Stealer malware infection using Wireshark. The objective was to identify the infection process, analyze network communications, recover Indicators of Compromise (IoCs), and observe how the malware communicated with its Command-and-Control (C2) infrastructure.
-
----
 
 ## Attack Flow
 
@@ -87,6 +104,8 @@ This project presents a forensic network traffic analysis of a Lumma Stealer mal
 | Port | TCP/443 |
 
 ---
+
+## Protocol Analyses
 
 ## Protocol Hierarchy
 
@@ -271,12 +290,6 @@ This analysis demonstrates a typical Lumma Stealer infection chain, beginning wi
 Although TLS encryption prevents inspection of the application payload, Wireshark provides sufficient network metadata—including DNS queries, Server Name Indication (SNI), IP addresses, TCP sessions, and exported HTTP objects—to identify the malicious infrastructure and reconstruct the attack timeline.
 
 The recovered Indicators of Compromise (IoCs) can be used for threat hunting, intrusion detection, malware detection, and incident response activities.
-
----
-
-## License
-
-This project is intended for educational and malware analysis purposes only.
 
 ---
 
