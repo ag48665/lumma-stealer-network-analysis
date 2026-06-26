@@ -229,3 +229,12 @@ The recovered Indicators of Compromise (IoCs) can be used for threat hunting, in
 
 This project is intended for educational and malware analysis purposes only.
 
+---
+---
+
+## Author
+
+**Agata Gabara**
+
+- GitHub: https://github.com/ag48665
+- LinkedIn: https://www.linkedin.com/in/agatha-gabara-06494a37/
