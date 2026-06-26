@@ -11,6 +11,32 @@ This project presents a forensic network traffic analysis of a Lumma Stealer mal
 
 ---
 
+## Analysis Objectives
+
+- Identify the malware communication flow.
+- Extract network-based Indicators of Compromise (IoCs).
+- Analyze DNS, TCP, and TLS communications.
+- Identify the Command-and-Control (C2) infrastructure.
+- Recover the downloaded malware payload.
+- Document the attack timeline.
+
+---
+
+## Repository Structure
+
+```
+.
+├── README.md
+├── images/
+│   ├── 01_protocol_hierarchy.png
+│   ├── ...
+│   └── 18_tcp_endpoints.png
+└── pcap/
+    └── 2025-06-26-Lumma-Stealer-infection-with-follow-up-malware.pcap
+```
+
+---
+
 ## Tools Used
 
 - Wireshark
@@ -178,8 +204,28 @@ The TCP Endpoints view lists all TCP connections established during the maliciou
 
 ---
 
+## MITRE ATT&CK Mapping
+
+| Tactic | Technique | Description |
+|---------|-----------|-------------|
+| Command and Control | T1071.001 | Web Protocols (HTTPS) |
+| Command and Control | T1573 | Encrypted Channel (TLS) |
+| Command and Control | T1105 | Ingress Tool Transfer |
+| Discovery | T1016 | System Network Configuration Discovery (network communication observed) |
+
+---
+
 # Conclusion
 
-The packet capture demonstrates a typical Lumma Stealer infection chain. The infected workstation first resolves the malicious domain **genhqq.xyz**, establishes encrypted TLS sessions with the Command-and-Control server (**144.172.115.212**), and downloads the malware payload **soks.exe** from **86.54.25.50** over HTTP. Despite TLS encryption preventing payload inspection, Wireshark provides sufficient metadata, including DNS requests, Server Name Indication (SNI), IP addresses, and exported HTTP objects, to identify the malware infrastructure and reconstruct the attack timeline.
+This analysis demonstrates a typical Lumma Stealer infection chain, beginning with DNS resolution, followed by encrypted TLS communication with the Command-and-Control (C2) server, and ending with retrieval of the malware payload over HTTP. The infected workstation first resolves the malicious domain **genhqq.xyz**, establishes encrypted TLS sessions with the C2 server (**144.172.115.212**), and retrieves the malware payload **soks.exe** from **86.54.25.50**.
 
-The recovered Indicators of Compromise can be used for threat hunting, intrusion detection, and incident response activities.
+Although TLS encryption prevents inspection of the application payload, Wireshark provides sufficient network metadata—including DNS queries, Server Name Indication (SNI), IP addresses, TCP sessions, and exported HTTP objects—to identify the malicious infrastructure and reconstruct the attack timeline.
+
+The recovered Indicators of Compromise (IoCs) can be used for threat hunting, intrusion detection, malware detection, and incident response activities.
+
+
+---
+## License
+
+This project is intended for educational and malware analysis purposes only.
+
