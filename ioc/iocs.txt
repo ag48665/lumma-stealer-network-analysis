@@ -1,0 +1,11 @@
+Domain:
+genhqq.xyz
+
+C2:
+144.172.115.212
+
+Payload:
+soks.exe
+
+Download:
+86.54.25.50
